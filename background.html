@@ -1,0 +1,63 @@
+<html>
+<head>
+	<script src='scripts/jquery-1.6.1.min.js'></script>
+	<script>
+	function history_listener() {
+		console.log('initiating history listener');
+		chrome.history.onVisited.addListener(function(result) {
+			console.log('history');
+			if (localStorage["last_visit_time"] !== undefined) {
+				if (new Date().getTime() - localStorage["last_visit_time"] > 100) {
+					// localStorage["most_recent_page"] = '';
+				    chrome.tabs.executeScript(null,
+					                           {code:"check_url()"});
+				}
+			}
+			localStorage["last_visit_time"] = new Date().getTime();
+		}); 
+	}
+
+function test() {
+	alert('test');
+}
+
+function fetch_url(last_url, callback) {
+	// alert('fetch from last fm now');
+	var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function(data) {
+      if (xhr.readyState == 4) {
+        if (xhr.status == 200) {
+          var data = xhr.responseText;
+          callback(data);
+        } else {
+          callback(null);
+        }
+      }
+    }
+    // Note that any URL fetched here must be matched by a permission in
+    // the manifest.json file!
+    var url = last_url;
+    xhr.open('GET', url, true);
+    xhr.send();
+}
+
+function onRequest(request, sender, callback) {
+        if (request.action == 'fetch_url') {
+          fetch_url(request.url, callback);
+        }
+		else if (request.action == 'set_tab_id') {
+			chrome.tabs.getSelected(null, function(tab) {
+				localStorage["tabID"] = tab.id;
+				callback(tab.id);
+			});
+		}
+};
+
+      // Wire up the listener.
+      chrome.extension.onRequest.addListener(onRequest);
+</script>
+</head>
+<body onload="history_listener();">
+
+</body>
+</html>

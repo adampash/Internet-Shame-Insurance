@@ -1,0 +1,12 @@
+{
+  "name": "Internet Shame Insurance",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": ["https://mail.google.com/*", "http://mail.google.com/*", "https://twitter.com/*", "http://twitter.com/*", "https://www.facebook.com/*", "http://www.facebook.com/*", "https://mail.google.co.uk/*", "http://mail.google.co.uk/*", "https://mail.google.com.au/*", "http://mail.google.com.au/*"],
+      "css": ["styles/mystyles.css"],
+      "js": ["scripts/jquery-1.6.1.min.js", "scripts/contentscript.js"],
+	  "all_frames": true
+    }
+  ]
+}
