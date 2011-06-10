@@ -1,7 +1,7 @@
 <img src="http://cache.gawker.com/assets/images/lifehacker/2011/06/fb-shame-big2.jpg" width="640" height="360" />
 <p>The web is filled with opportunities to humiliate yourself. You reply all with a scathing takedown of your boss; you post pictures on Facebook of a drunken night out and your mom starts to worry; you accidentally tweet a picture of your downstairs business to the internet at large.  This simple tool helps you protect the <a href="http://gawker.com/5809909/anthony-weiners-cock-shot-emerges">privacy of your Weiner</a> whenever possible.</p>
 
-<div class="modfont" style="border-top:1px solid #CCC; border-bottom:1px solid #CCC; height:205px; padding-top:10px; margin-bottom: 10px; height:205px;"><img src="http://cache.gawker.com/assets/images/lifehacker/2011/06/shame-blocker-logo.png" width="128" height="128" />
+<div class="modfont" style="border-top:1px solid #CCC; border-bottom:1px solid #CCC; height:205px; padding-top:10px; margin-bottom: 10px; height:205px;"><img src="http://cache.gawker.com/assets/images/lifehacker/2011/06/shame-blocker-logo.png" width="128" height="128" style="float:left; margin-right:15px;" />
 <h3><a href="http://lifehacker.com/5810453/save-yourself-from-weiner+calibre-online-embarrassment-with-internet-shame-insurance">Internet Shame Insurance</a></h3>
 <p><b>Platform:</b> Windows, Mac, and Linux with <a href="http://www.google.com/chrome">Google Chrome</a><br />
 <b>Price:</b> Free<br />
